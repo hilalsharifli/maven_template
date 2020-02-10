@@ -16,17 +16,22 @@ public class DataInput {
         b=scanner.nextInt();
         System.out.println("Please input import operation sign:");
         s=scanner.next();
-            if (s.equals("+")) {
-            System.out.println("a+b is equal to " + (a + b));
+        if (s.equals("+")) {
+            System.out.println("a+b is equal to " + (a+b));
         }
-            if (s.equals("-")){
-                System.out.println("a-b is equal to " + (a-b));
-            }
+        if (s.equals("-")) {
+            System.out.println("a-b is equal to " + (a-b));
+        }
         if (s.equals("*")) {
             System.out.println("a*b is equal to " + (a*b));
         }
-        if (s.equals("/")){
+        if (s.equals("/")) {
+            if (b==0){
+                System.out.println("Division by zero is not possible please input different number");
+                b=scanner.nextInt();
+            }
             System.out.println("a/b is equal to " + (a/b));
+
         }
 
     }
